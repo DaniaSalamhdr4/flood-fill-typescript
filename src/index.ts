@@ -23,16 +23,14 @@ function floodFill(
 
   function dfs(row: number, col: number) {
     // check boundaries
-    // if (row < 0 || row >= image.length || col < 0 ) {
-    //   return;
-    // }
-
-    // if (!image[row] || col >= image[row].length) {
-    //   return;
-    // }
-    if (row < 0 || row >= image.length || col < 0 || col >= image[row].length) {
+    if (row < 0 || row >= image.length || col < 0) {
       return;
     }
+
+    if (!image[row] || col >= image[row].length) {
+      return;
+    }
+
     if (image[row][col] !== originalColor) {
       return;
     }
@@ -50,9 +48,11 @@ function floodFill(
 
   return image;
 }
-const grid = [
+
+//test program
+const image1 = [
   [1, 1, 1, 0],
   [0, 1, 1, 1],
   [1, 0, 1, 1],
 ];
-console.log(floodFill(grid, 1, 2, 2));
+console.log(floodFill(image1, 1, 2, 2));
