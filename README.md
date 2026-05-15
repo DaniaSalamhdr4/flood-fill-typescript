@@ -1,8 +1,8 @@
 # flood-fill-typescript
 
-## Repository Description
-
 A TypeScript implementation of the **Flood Fill Algorithm** using the **Depth-First Search (DFS)** approach.
+
+## Repository Description
 
 This project solves the classic Flood Fill problem commonly used in image editing applications, graph traversal, and matrix-based algorithms.
 The algorithm starts from a given pixel and changes the color of all connected pixels that share the same original color.
